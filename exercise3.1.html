@@ -1,0 +1,39 @@
+<!-- 1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        function simple(n) {
+            if (n === 2) {
+                return true
+            }
+            let i = 2;
+            while (i < n) {
+                if (n % i !== 0) {
+                    i++;            
+                } else {
+                    return false;
+                }
+                if (i === n) {
+                    return true;
+                }
+            }
+        }
+        let arr = [];
+        for (let j = 1; j < 100; j++) {
+            if (simple(j) === true) {        
+                arr.push(j);
+            }
+        }
+        console.log(arr);
+    </script>
+</body>
+</html>
