@@ -1,0 +1,29 @@
+<!-- 0. Создайте объект calcus, у которого есть 2 свойства "a" и "b" , оба числа. 
+     И метод sumLog который выводит в консоль сумму двух этих чисел -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        const num1 = +prompt("Введите первое число");
+        const num2 = +prompt("Введите второе число");
+        const calcus = {
+    a: num1,
+    b: num2,
+};
+
+calcus.sumLog = function () {
+    console.log(this.a + this.b);
+}
+
+calcus.sumLog();
+    </script>
+</body>
+</html>
